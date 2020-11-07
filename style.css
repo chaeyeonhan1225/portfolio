@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#container {
+    border-collapse: collapse;
+    height: 100%;
+    background-color: yellowgreen;
+}
+
+.content {
+    background-color: white;
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.menu-bar {
+    width: 10px;
+    height: 100%;
+    left: 200px;
+    position: fixed;
+    background-color: thistle;
+}
+
+.circle-img {
+    margin-left: 10px;
+    border-radius: 50%;
+    float: left;
+}
+
+.square-img {
+    max-width: 500px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border-radius: 15px;
+    float: left;
+}
+
+.right-img {
+    float: right;
+    margin-right: 10px;
+}
+
+.banner-content {
+    padding: 10px;
+    margin-left: 20px;
+    float: left;
+}
+.tags {
+    color: black;
+}
+.card {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #bfc5c9;
+    box-shadow: 6px 6px 1px #bfc5c9;
+}
+.profile {
+    border: 1.5px solid #009a8d;
+    box-shadow: 0px 5px 0px #009a8d;
+}
+
+.banner {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    float: left;
+    border-radius: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #bfc5c9;
+}
+
+.license {
+    margin: 10px;
+    font-size: 20px;
+}
+
+mark {
+    margin: 0 -0.4em;
+    padding: 0.1em 0.4em;
+    background: linear-gradient(to top, #7ae4dc 50%, transparent 50%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.cyan-highlight {
+    background: linear-gradient(to top, #a8eee8 50%, transparent 50%); 
+}
+
+.detail-content {
+    margin: 20px 0px;
+}
+
+.chip {
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+    margin: 0 10px;
+
+    cursor: pointer;
+}
+
+.chip.primary {
+    color: #00c9b8;
+    background-color: white;
+}
+
+.more-btn {
+    font-size: 20px;
+    position: absolute;
+    right: 25px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid lightskyblue;
+    box-shadow: 0 -3px 0 lightskyblue inset;
+}
