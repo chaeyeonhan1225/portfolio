@@ -9,21 +9,33 @@
 
 <body>
     <div id="container">
-        <div class="menu-bar"></div>
+        <div class="modal hidden">
+            <div class="modal_overlay"></div>
+            <div class="modal_content">
+                <img src="" class="modal_img">
+                <div class="modal_close"><i class="fas fa-times"></i></div>
+            </div>
+        </div>
         <div class="content">
             <h1>Chaeyeon's Portfolio</h1>
-            <h2>#Portfolio</h2>
-            <h2>#Tech</h2>
             <div class="card profile">
                 <img src="./profile-temp.jpg" class="circle-img">
                 <span class="banner-content">
                     <h1>한채연</h1>
                     <div>
-                        안녕하세요
+                        IT에 관심이 많은 개발자 입니다.
                     </div>
-                    <div>
-                        Git: <a href="https://github.com/chaeyeonhan1225">https://github.com/chaeyeonhan1225</a> <br>
-                        Blog: <a href="https://velog.io/@gkscodus11">https://velog.io/@gkscodus11</a>
+                    <div style="font-size: 18px">
+                        <i class="fas fa-user-graduate"></i> 한국해양대학교 전자통신공학과 졸업
+                    </div>
+                    <div class="detail-content">
+                        <span class="chip darkblue">Git</span>
+                        <a href="https://github.com/chaeyeonhan1225">https://github.com/chaeyeonhan1225</a>
+
+                    </div>
+                    <div class="detail-content">
+                        <span class="chip darkblue">Blog</span>
+                        <a href="https://velog.io/@gkscodus11">https://velog.io/@gkscodus11</a>
                     </div>
                 </span>
             </div>
@@ -49,14 +61,16 @@
                         <span class="chip primary">사용 프레임 워크</span> Flutter / Node.js
                     </div>
                     <div class="detail-content">
-                        <a href=""><i class="fas fa-link"></i> Play Store</a> <br>
-                        <a href=""><i class="fas fa-link"></i> App Store</a> <br>
+                        <a href="https://play.google.com/store/apps/details?id=com.dsckmou.kmouin">
+                            <i class="fab fa-google-play"></i> Play Store</a> <br>
+                        <a href="https://apps.apple.com/kr/app/%ED%95%B4%EB%8C%80%EC%9D%B8/id1531884472"><i
+                                class="fab fa-app-store"></i> App Store</a> <br>
                     </div>
                 </span>
             </div>
-            <h1 class="tags"><mark class="cyan-highlight"># 활동</mark></h1>
+            <h1 class="tags"><mark class="coral-highlight"># 활동</mark></h1>
             <div class="card">
-                <img src="/image/dsc.png" class="square-img">
+                <img src="/image/dsc.png" style="display: block; margin: 0 auto; padding: 20px">
                 <span class="banner-content" style="margin-top: 10px">
                     <h1>DSC(Developer Student Club)</h1>
                     <div>
@@ -68,49 +82,113 @@
                     <br>
                     <h1><i class="fas fa-check"></i> DSC에서의 활동들</h1>
                     <div class="banner">
-                        <img src="./profile-temp.jpg" class="square-img">
                         <span class="banner-content">
                             <h1>WEB</h1>
-                            <div>
-                                웹 스터디에서 JavaScript와 Node.js를 공부하였습니다.
-                            </div>
+                            JavaScript와 html, css에 대해 배울 수 있었습니다.
+                            웹 스터디에서 배운 JavaScript로 Node.js와 Vue.js에 대해서도 공부하였습니다.
+
                         </span>
                     </div>
                     <div class="banner">
+                        <img src="/image/app.jpg" width="280px" class="square-img">
                         <span class="banner-content">
                             <h1>APP</h1>
                             <div>
-                                APP 스터디를 주도해 앱 '해대인'의 버스 정보 페이지 중 하나를 다같이 만들었습니다.
+                                <p>1. DSC Solution 참가</p>
+                                <p>하나 이상의 구글 기술을 활용하여 사회적 문제 해결책을 제시하는DSC Solution에 참가하였습니다.</p>
+                                <p><i class="fas fa-link"></i> DSC Solution 결과물<p>
+                                        <p>2. '해대인'앱 제작</p>
+                                        <p>한국해양대학교 학생들에게 필요한 정보를 앱 하나로 볼 수 있게 만들었습니다.</p>
+                                        <p>해대인 앱을 제작할때, DSC 회원들에게 Flutter 교육도 진행하였습니다.</p>
                             </div>
                         </span>
-                        <img src="./profile-temp.jpg" class="square-img right-img">
-                    </div>
-                    <div class="banner">
-                        <img src="image/알고리즘.jpg" width="300px" class="square-img">
-                        <span class="banner-content">
-                            <h1>알고리즘</h1>
-                            <div>
-                                매주 문제를 정하고 문제를 풀었습니다.
-                            </div>
-                        </span>
+                </span>
+
+            </div>
+            <div class="banner">
+                <span class="banner-content">
+                    <h1>알고리즘</h1>
+                    <div>
+                        알고리즘 온라인 저지 사이트의 그룹 기능을 활용하여 "DSC_ALGORITHM" 그룹을 구성해<br>
+                        매주 실제 코딩테스트 처럼 시험을 치고, 문제 풀이를 공유하였습니다.<br>
+                        알고리즘 스터디에서 1년간 활동하면서 문제 해결 능력을 키울 수 있었습니다.
                     </div>
                 </span>
+                <img src="image/알고리즘.jpg" width="300px" class="square-img right-img">
             </div>
-
-
-            <h1 class="tags"><mark class="cyan-highlight"># 자격증</mark></h1>
-            <div class="license">
-                1.정보 처리 기사
-            </div>
-            <div class="license">
-                2.TOEIC
-            </div>
-            <h1 class="tags"><mark class="cyan-highlight"># Tech</mark></h1>
-
+            </span>
         </div>
 
 
+        <h1 class="tags"><mark class="orange-highlight"># 자격증</mark></h1>
+        <span style="display:flex; margin-top: 10px">
+            <div class="license">
+                <h3><i class="far fa-id-badge"></i> 정보 처리 기사</h3>
+                <br>
+                <p>2019.08.16</p>
+            </div>
+            <div class="license">
+                <h3><i class="fas fa-font"></i> TOEIC</h3>
+                <div>830점</div>
+                <p>2019.09.08</p>
+            </div>
+        </span>
+        <h1 class="tags"><mark class="yellow-highlight"># Tech</mark></h1>
+        <span class="skills">
+            <div class="skill-block">
+                JavaScript
+            </div>
+            <div class="skill-block">
+                html
+            </div>
+            <div class="skill-block">
+                css
+            </div>
+            <div class="skill-block">
+                Java
+            </div>
+            <div class="skill-block">
+                Node.js
+            </div>
+            <div class="skill-block">
+                Vue.js
+            </div>
+            <div class="skill-block">
+                Flutter
+            </div>
+            <div class="skill-block">
+                C++
+            </div>
+        </span>
+        <h1 class="tags"><mark class="blue-highlight"># CONTACT ME</mark></h1>
+        <div class="banner" style="text-align: center; margin: 20px 10px 60px 10px">
+            <p><i class="fas fa-phone"></i> PHONE 010-2628-8562</p>
+            <p><i class="far fa-envelope"></i> EMAIL gkscodus11@naver.com</p>
+        </div>
     </div>
+    </div>
+    <script>
+        const image = document.querySelectorAll("img");
+        const modal = document.querySelector('.modal');
+        const modal_img = document.querySelector('.modal_img');
+        const modal_close = document.querySelector(".modal_close");
+        const modal_overlay = document.querySelector(".modal_overlay");
+
+        console.log(image);
+        image.forEach(img => {
+            img.addEventListener("click", () => {
+                modal.classList.remove('hidden');
+                modal_img.src = img.src;
+            });
+        });
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        modal_close.addEventListener("click", closeModal);
+        modal_overlay.addEventListener("click", closeModal);
+    </script>
 </body>
 
 </html>
