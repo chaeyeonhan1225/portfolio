@@ -4,7 +4,258 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #container {
+            border-collapse: collapse;
+            height: 100%;
+            background-color: yellowgreen;
+        }
+
+        .content {
+            background-color: white;
+            width: 60%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .menu-bar {
+            width: 10px;
+            height: 100%;
+            left: 200px;
+            position: fixed;
+            background-color: thistle;
+        }
+
+        .circle-img {
+            margin-left: 10px;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .square-img {
+            max-width: 500px;
+            margin-left: 10px;
+            margin-right: 20px;
+            border-radius: 15px;
+            float: left;
+        }
+
+        .right-img {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .banner-content {
+            padding: 10px;
+            margin-left: 20px;
+            float: left;
+        }
+
+        .tags {
+            color: black;
+        }
+
+        .card {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            float: left;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid #bfc5c9;
+            box-shadow: 6px 6px 1px #bfc5c9;
+        }
+
+        .profile {
+            border: 1.5px solid #8ed5ec;
+            box-shadow: 0px 5px 0px #8ed5ec;
+        }
+
+        .banner {
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            float: left;
+            border-radius: 10px;
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid #bfc5c9;
+        }
+
+        .license {
+            background-color: white;
+            width: 200px;
+            margin: 10px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: 1px solid #bfc5c9;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+            font-size: 20px;
+        }
+
+        mark {
+            margin: 0 -0.4em;
+            padding: 0.1em 0.4em;
+            background: linear-gradient(to top, #7ae4dc 50%, transparent 50%);
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+        mark.cyan-highlight {
+            background: linear-gradient(to top, #a8eee8 50%, transparent 50%);
+        }
+
+        mark.coral-highlight {
+            background: linear-gradient(to top, #ffb7b2 50%, transparent 50%);
+        }
+
+        mark.orange-highlight {
+            background: linear-gradient(to top, #ffdac1 50%, transparent 50%);
+        }
+
+        mark.yellow-highlight {
+            background: linear-gradient(to top, #fdfd97 50%, transparent 50%);
+        }
+
+        mark.blue-highlight {
+            background: linear-gradient(to top, #8ed5ec 50%, transparent 50%);
+        }
+
+        .detail-content {
+            margin: 20px 0px;
+        }
+
+        .chip {
+            padding: 8px 10px;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+            margin: 0 10px;
+
+            cursor: pointer;
+        }
+
+        .chip.primary {
+            color: white;
+            background-color: #45AAB4;
+        }
+
+        .chip.darkblue {
+            color: white;
+            background-color: #206491;
+        }
+
+        .more-btn {
+            font-size: 20px;
+            position: absolute;
+            right: 25px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 1px solid lightskyblue;
+            box-shadow: 0 -3px 0 lightskyblue inset;
+        }
+
+        .skills {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .skill-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 20px;
+            text-align: center;
+            color: black;
+            border: 1px solid #bfc5c9;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+            transition: all 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .skill-block:hover {
+            transition: all 0.5s;
+            transition-timing-function: ease-in-out;
+            transform: scale(1.2);
+        }
+
+        p {
+            font-weight: lighter;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+
+        .modal {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 99;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .modal_overlay {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+        }
+
+        .modal_img {
+            position: relative;
+            max-width: 60%;
+            box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 30px;
+        }
+
+        .modal_close {
+            position: absolute;
+            font-size: 100px;
+            color: white;
+            top: 30px;
+            right: 22%;
+        }
+
+        .modal_close:hover {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -97,8 +348,8 @@
                                 <p>1. DSC Solution 참가</p>
                                 <p>하나 이상의 구글 기술을 활용하여 사회적 문제 해결책을 제시하는DSC Solution에 참가하였습니다.</p>
                                 <p><i class="fas fa-link"></i><a href="https://github.com/DSC-KMOU-App/OllySarang"
-                                        style="font-weight: bold; font-size: 16px;"> 
-                                         DSC Solution 결과물</a>
+                                        style="font-weight: bold; font-size: 16px;">
+                                        DSC Solution 결과물</a>
                                     <p>
                                         <p>2. '해대인'앱 제작</p>
                                         <p>한국해양대학교 학생들에게 필요한 정보를 앱 하나로 볼 수 있게 만들었습니다.</p>
